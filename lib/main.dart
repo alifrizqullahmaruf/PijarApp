@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pijar_app/pages/auth/login_screen.dart';
+import 'package:pijar_app/pages/auth/register_screen.dart';
 import 'package:pijar_app/pages/splash_screen.dart';
 
 void main() {
