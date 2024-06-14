@@ -95,7 +95,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    "Already have an account? ",
+                    "Don't have an account? ",
                     style: TextStyle(fontWeight: FontWeight.w400),
                   ),
                   InkWell(
@@ -106,7 +106,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 builder: (context) => RegisterScreen()));
                       },
                       child: Text(
-                        "Login",
+                        "Register",
                         style: TextStyle(
                             color: Color(0xFF1455FE),
                             fontWeight: FontWeight.w400),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pijar_app/pages/auth/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -82,7 +83,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    // Action untuk tombol Sign in
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF1455FE), // Warna tombol
@@ -99,7 +103,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 ),
               ),
               SizedBox(height: 24),
-              
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text(
+                    "Already have an account? ",
+                    style: TextStyle(fontWeight: FontWeight.w400),
+                  ),
+                  InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterScreen()));
+                      },
+                      child: Text(
+                        "Login",
+                        style: TextStyle(
+                            color: Color(0xFF1455FE),
+                            fontWeight: FontWeight.w400),
+                      )),
+                ],
+              )
             ],
           ),
         ),
