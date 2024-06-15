@@ -63,6 +63,8 @@ flutter:
     - lib/assets/logo.png
     - lib/assets/splash.png
     - lib/assets/smallLogo.png
+    - lib/assets/coldPlay.png
+    - lib/assets/blues.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
