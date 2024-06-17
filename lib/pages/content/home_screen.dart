@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pijar_app/widgets/big_card.dart';
+import 'package:pijar_app/widgets/search_bar.dart';
 import 'package:pijar_app/widgets/small_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -17,41 +18,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 8),
-                  child: Container(
-                    decoration: BoxDecoration(
-                      color: Colors.grey.shade200,
-                      borderRadius: BorderRadius.circular(32),
-                    ),
-                    child: Row(
-                      children: [
-                        IconButton(
-                          icon: Icon(Icons.search),
-                          onPressed: () {
-                            // Implement the functionality for the left icon
-                          },
-                        ),
-                        Expanded(
-                          child: TextField(
-                            decoration: InputDecoration(
-                              hintText: "Search by artist, place, or genre...",
-                              border: InputBorder.none,
-                              contentPadding:
-                                  EdgeInsets.symmetric(vertical: 10),
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.menu),
-                          onPressed: () {
-                            // Implement the functionality for the right icon
-                          },
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
+                SearchBarWidgets(),
                 SizedBox(height: 16),
                 Row(
                   children: [
