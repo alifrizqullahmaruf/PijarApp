@@ -16,9 +16,9 @@ class ActivityScreen extends StatelessWidget {
               child: Column(
                         children: [
               SearchBarWidgets(),
-              SizedBox(
-                height: 24,
-              ),
+              // SizedBox(
+              //   height: 24,
+              // ),
               ActivityCard(
                 logoImagePath: "lib/assets/smallLogo.png",
                 activityImagePath: "lib/assets/activityImg.png",

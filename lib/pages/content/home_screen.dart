@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pijar_app/widgets/big_card.dart';
 import 'package:pijar_app/widgets/search_bar.dart';
 import 'package:pijar_app/widgets/small_card.dart';
@@ -69,17 +68,45 @@ class HomeScreen extends StatelessWidget {
                 GridView.count(
                   mainAxisSpacing: 16,
                   crossAxisSpacing: 16,
-                  crossAxisCount: 2, // Menentukan jumlah kolom
+                  crossAxisCount: 2,
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   children: List.generate(
-                    4, // Number of SmallCard widgets
-                    (index) => SmallCard(
-                      imagePath: "lib/assets/blues.png",
-                      title: "Don’t Drunk Henry",
-                      location: "Pekanbaru",
-                      date: "Aug 30",
-                    ),
+                    4,
+                    (index) {
+                      switch (index) {
+                        case 0:
+                          return SmallCard(
+                            imagePath: "lib/assets/image1.png",
+                            title: "Don’t Drunk Henry",
+                            location: "Pekanbaru",
+                            date: "Aug 30",
+                          );
+                        case 1:
+                          return SmallCard(
+                            imagePath: "lib/assets/image2.png",
+                            title: "Sepatu",
+                            location: "Surabaya",
+                            date: "March 30",
+                          );
+                        case 2:
+                          return SmallCard(
+                            imagePath: "lib/assets/image3.png",
+                            title: "Among us",
+                            location: "Yogyakarta",
+                            date: "Sep 30",
+                          );
+                        case 3:
+                          return SmallCard(
+                            imagePath: "lib/assets/image4.png",
+                            title: "Forgive What I’ve Done",
+                            location: "Padang",
+                            date: "Dec 30",
+                          );
+                        default:
+                          return Container();
+                      }
+                    },
                   ),
                 ),
               ],

@@ -31,6 +31,7 @@ class SmallCard extends StatelessWidget {
       child: ClipRRect(
         borderRadius: BorderRadius.circular(8),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
               imagePath,
@@ -40,7 +41,7 @@ class SmallCard extends StatelessWidget {
             ),
             SizedBox(height: 8),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8), // Mengurangi padding vertikal
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -60,9 +61,12 @@ class SmallCard extends StatelessWidget {
                         size: 16,
                       ),
                       SizedBox(width: 4),
-                      Text(
-                        location,
-                        style: TextStyle(color: Colors.grey),
+                      Expanded( // Menambahkan Expanded untuk teks lokasi
+                        child: Text(
+                          location,
+                          style: TextStyle(color: Colors.grey),
+                          overflow: TextOverflow.ellipsis,
+                        ),
                       ),
                       Spacer(),
                       Text(
