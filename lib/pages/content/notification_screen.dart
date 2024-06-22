@@ -24,7 +24,7 @@ class NotificationScreen extends StatelessWidget {
                   children: [
                     Image.asset(
                       "lib/assets/notification.png",
-                      height: 200,
+                      height: 150,
                     ),
                     SizedBox(
                         height: 16), // Menambahkan jarak antara gambar dan teks

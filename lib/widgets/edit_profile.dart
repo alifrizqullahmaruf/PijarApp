@@ -16,11 +16,25 @@ class EditProfileItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Container(child: Icon(leadingIcon),),
-        SizedBox(width: 24,),
+        Container(
+          decoration: BoxDecoration(
+            color: Color.fromARGB(85, 20, 85, 254),
+            shape: BoxShape.circle,
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Icon(leadingIcon, color: Color.fromARGB(255, 20, 86, 254)),
+          ),
+        ),
+        SizedBox(
+          width: 24,
+        ),
         Text(text),
         Spacer(),
-        Icon(trailingIcon),
+        Icon(
+          trailingIcon,
+          color: Color.fromARGB(255, 20, 86, 254),
+        ),
       ],
     );
   }

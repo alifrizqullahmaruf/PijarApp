@@ -7,26 +7,56 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Profile"),),
+      appBar: AppBar(
+        title: Center(child: Text("Profile")),
+      ),
       body: SafeArea(
-          child: Column(
-        children: [
-          Image.asset("lib/assets/profile.png"),
-          Text("Name"),
-          Text("phone"),
-          Text("email"),
-          SizedBox(height: 56,),
-          EditProfileItem(
-          leadingIcon: Icons.lock,
-          text: "Privacy Policy",
-          trailingIcon: Icons.arrow_back,
+          child: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          children: [
+            Image.asset("lib/assets/profile.png"),
+            SizedBox(
+              height: 16,
+            ),
+            Text(
+              "Alif Rizqullah Maruf",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
+            ),
+            Text(
+              "082111492113",
+              style: TextStyle(fontSize: 16),
+            ),
+            Text(
+              "alifrizz@mail.ugm.ac.id",
+              style: TextStyle(fontSize: 16),
+            ),
+            SizedBox(
+              height: 56,
+            ),
+            EditProfileItem(
+              leadingIcon: Icons.lock,
+              text: "Privacy Policy",
+              trailingIcon: Icons.arrow_right,
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            EditProfileItem(
+              leadingIcon: Icons.person,
+              text: "Account Settings",
+              trailingIcon: Icons.arrow_right,
+            ),
+            SizedBox(
+              height: 16,
+            ),
+            EditProfileItem(
+              leadingIcon: Icons.logout,
+              text: "Log out",
+              trailingIcon: Icons.arrow_right,
+            ),
+          ],
         ),
-        EditProfileItem(
-          leadingIcon: Icons.person,
-          text: "Account Settings",
-          trailingIcon: Icons.arrow_forward,
-        ),
-        ],
       )),
     );
   }
