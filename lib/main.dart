@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pijar_app/pages/auth/login_screen.dart';
 import 'package:pijar_app/pages/auth/register_screen.dart';
 import 'package:pijar_app/pages/bottom_navbar.dart';
+import 'package:pijar_app/pages/detail_concert.dart';
 import 'package:pijar_app/pages/splash_screen.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BottomNavbar(),
+      home: const DetailConcert(),
     );
   }
 }
