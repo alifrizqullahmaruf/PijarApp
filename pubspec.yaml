@@ -71,6 +71,10 @@ flutter:
     - lib/assets/image2.png
     - lib/assets/image3.png
     - lib/assets/image4.png
+    - lib/assets/imageA.png
+    - lib/assets/imageB.png
+    - lib/assets/imageC.png
+    - lib/assets/imageD.png
     - lib/assets/notification.png
     - lib/assets/profile.png
   #   - images/a_dot_ham.jpeg

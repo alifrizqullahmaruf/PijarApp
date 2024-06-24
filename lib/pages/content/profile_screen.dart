@@ -15,7 +15,8 @@ class ProfileScreen extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            Image.asset("lib/assets/profile.png"),
+            Container(
+                height: 150, child: Image.asset("lib/assets/profile.png")),
             SizedBox(
               height: 16,
             ),

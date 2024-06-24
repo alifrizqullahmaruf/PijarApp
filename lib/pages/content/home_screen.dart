@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pijar_app/pages/detail_concert.dart';
 import 'package:pijar_app/widgets/big_card.dart';
 import 'package:pijar_app/widgets/search_bar.dart';
 import 'package:pijar_app/widgets/small_card.dart';
@@ -40,6 +41,13 @@ class HomeScreen extends StatelessWidget {
                   child: Row(
                     children: [
                       BigCard(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DetailConcert()),
+                            );
+                          },
                           imagePath: "lib/assets/coldPlay.png",
                           title: "Coldplay for Charity Concert",
                           location: "Yogyakarta",
@@ -48,6 +56,7 @@ class HomeScreen extends StatelessWidget {
                         width: 16,
                       ),
                       BigCard(
+                          onTap: () {},
                           imagePath: "lib/assets/blues.png",
                           title: "Blues for Betterment",
                           location: "Jakarta",

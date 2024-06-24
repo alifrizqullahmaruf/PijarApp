@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pijar_app/pages/auth/register_screen.dart';
+import 'package:pijar_app/pages/bottom_navbar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -70,7 +71,10 @@ class _LoginScreenState extends State<LoginScreen> {
               Center(
                 child: ElevatedButton(
                   onPressed: () {
-                    // Action untuk tombol Sign in
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BottomNavbar()));
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF1455FE), // Warna tombol
