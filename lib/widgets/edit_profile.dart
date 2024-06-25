@@ -31,10 +31,10 @@ class EditProfileItem extends StatelessWidget {
         ),
         Text(text),
         Spacer(),
-        Icon(
-          trailingIcon,
-          color: Color.fromARGB(255, 20, 86, 254),
-        ),
+        Container(
+          width: 24,
+          child: Image.asset('lib/assets/iconBack.png'),
+        )
       ],
     );
   }

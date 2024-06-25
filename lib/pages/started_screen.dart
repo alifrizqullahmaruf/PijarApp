@@ -19,9 +19,13 @@ class _StartedScreenState extends State<StartedScreen> {
             alignment: Alignment.center,
             children: [
               Positioned(
+                bottom: 200,
                 child: Column(
                   children: [
-                    Image.asset("lib/assets/logo.png"),
+                    Container(
+                      height: 550,
+                      child: Image.asset("lib/assets/logo.png"),
+                    ),
                   ],
                 ),
               ),
@@ -31,69 +35,73 @@ class _StartedScreenState extends State<StartedScreen> {
                   borderRadius:
                       BorderRadius.circular(32), // Radius sudut container
                   child: Container(
-                    height: 312,
+                    height: 350,
                     width: MediaQuery.of(context).size.width *
                         1, // Sesuaikan lebar container
                     color: Colors.white,
                     padding: EdgeInsets.symmetric(
                         horizontal: 24.0,
                         vertical: 16.0), // Padding di dalam container
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Text(
-                          "Harmonize for Humanity, Be a Part of It!",
-                          textAlign: TextAlign.center, // Center align text
-                          style: TextStyle(
-                              fontSize: 44,
-                              fontWeight:
-                                  FontWeight.w500), // Ukuran teks disesuaikan
-                        ),
-                        SizedBox(height: 24),
-                        ElevatedButton(
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => LoginScreen()));
-                          },
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Color(0xFF1455FE), // Warna tombol
-                            fixedSize: Size(312, 47), // Ukuran tetap tombol
-                            shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.circular(32), // Radius tombol
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 24,
-                                vertical: 16), // Padding dalam tombol
-                          ),
-                          child: Text(
-                            "Get started",
+                    child: SingleChildScrollView(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Harmonize for Humanity, Be a Part of It!",
+                            textAlign: TextAlign.center, // Center align text
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w400),
+                                fontSize: 44,
+                                fontWeight:
+                                    FontWeight.w500), // Ukuran teks disesuaikan
                           ),
-                        ),
-                        SizedBox(height: 24),
-                        Row(
-                          mainAxisAlignment:
-                              MainAxisAlignment.center, // Center align row
-                          children: [
-                            Text("Already have an account?",
-                                style: TextStyle(
-                                    fontSize: 15, fontWeight: FontWeight.w400)),
-                            SizedBox(width: 10),
-                            Text(
-                              "Login",
+                          SizedBox(height: 24),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => LoginScreen()));
+                            },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor:
+                                  Color(0xFF1455FE), // Warna tombol
+                              fixedSize: Size(312, 47), // Ukuran tetap tombol
+                              shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.circular(32), // Radius tombol
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 24,
+                                  vertical: 16), // Padding dalam tombol
+                            ),
+                            child: Text(
+                              "Get started",
                               style: TextStyle(
-                                  color: Color(0xFF1455FE),
-                                  fontSize: 15,
+                                  color: Colors.white,
                                   fontWeight: FontWeight.w400),
                             ),
-                          ],
-                        ),
-                      ],
+                          ),
+                          SizedBox(height: 24),
+                          Row(
+                            mainAxisAlignment:
+                                MainAxisAlignment.center, // Center align row
+                            children: [
+                              Text("Already have an account?",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.w400)),
+                              SizedBox(width: 10),
+                              Text(
+                                "Login",
+                                style: TextStyle(
+                                    color: Color(0xFF1455FE),
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w400),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

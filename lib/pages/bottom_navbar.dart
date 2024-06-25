@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:pijar_app/pages/content/activity_screen.dart';
 import 'package:pijar_app/pages/content/home_screen.dart';
 import 'package:pijar_app/pages/content/notification_screen.dart';
@@ -12,65 +13,85 @@ class BottomNavbar extends StatefulWidget {
 }
 
 class _BottomNavbarState extends State<BottomNavbar> {
-  int _selectedIndex = 0;
+  late PersistentTabController _controller;
 
-  final List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    ActivityScreen(),
-    NotificationScreen(),
-    ProfileScreen(),
-  ];
+  @override
+  void initState() {
+    super.initState();
+    _controller = PersistentTabController(initialIndex: 0);
+  }
 
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  List<Widget> _buildScreens() {
+    return [
+      HomeScreen(),
+      ActivityScreen(),
+      NotificationScreen(),
+      ProfileScreen(),
+    ];
+  }
+
+  List<PersistentBottomNavBarItem> _navBarsItems() {
+    return [
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.home),
+        title: ("Home"),
+        activeColorPrimary: Colors.black,
+        inactiveColorPrimary: Colors.grey.shade500,
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.event),
+        title: ("Activity"),
+        activeColorPrimary: Colors.black,
+        inactiveColorPrimary: Colors.grey.shade500,
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.notifications),
+        title: ("Notifications"),
+        activeColorPrimary: Colors.black,
+        inactiveColorPrimary: Colors.grey.shade500,
+      ),
+      PersistentBottomNavBarItem(
+        icon: Icon(Icons.person),
+        title: ("Profile"),
+        activeColorPrimary: Colors.black,
+        inactiveColorPrimary: Colors.grey.shade500,
+      ),
+    ];
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: [
-          _widgetOptions.elementAt(_selectedIndex),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-            child: Align(
-              alignment: const Alignment(0.0, 1.0),
-              child: Container(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(40),
-                  child: BottomNavigationBar(
-                    onTap: _onItemTapped,
-                    items: const [
-                      BottomNavigationBarItem(
-                        icon: Icon(Icons.home),
-                        label: "Home",
-                      ),
-                      BottomNavigationBarItem(
-                        icon: Icon(Icons.event),
-                        label: "Activity",
-                      ),
-                      BottomNavigationBarItem(
-                        icon: Icon(Icons.notifications),
-                        label: "Notifications",
-                      ),
-                      BottomNavigationBarItem(
-                        icon: Icon(Icons.person),
-                        label: "Profile",
-                      ),
-                    ],
-                    selectedItemColor: Colors.black,
-                    unselectedItemColor: Colors.grey.shade500,
-                    showSelectedLabels: true,
-                    showUnselectedLabels: true,
-                    currentIndex: _selectedIndex,
-                  ),
-                ),
-              ),
-            ),
-          ),
-        ],
+      body: PersistentTabView(
+        context,
+        controller: _controller,
+        screens: _buildScreens(),
+        items: _navBarsItems(),
+        confineInSafeArea: true,
+        backgroundColor: Colors.white, // Default is Colors.white.
+        handleAndroidBackButtonPress: true, // Default is true.
+        resizeToAvoidBottomInset:
+            true, // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
+        stateManagement: true, // Default is true.
+        hideNavigationBarWhenKeyboardShows:
+            true, // Recommended to set 'true' to hide the nav bar when keyboard appears. Default is true.
+        decoration: NavBarDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          colorBehindNavBar: Colors.white,
+        ),
+        popAllScreensOnTapOfSelectedTab: true,
+        popActionScreens: PopActionScreensType.all,
+        itemAnimationProperties: ItemAnimationProperties(
+          duration: Duration(milliseconds: 200),
+          curve: Curves.ease,
+        ),
+        screenTransitionAnimation: ScreenTransitionAnimation(
+          animateTabTransition: true,
+          curve: Curves.ease,
+          duration: Duration(milliseconds: 200),
+        ),
+        navBarStyle:
+            NavBarStyle.style6, // Choose the nav bar style with this property.
       ),
     );
   }

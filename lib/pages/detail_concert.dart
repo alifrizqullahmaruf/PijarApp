@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pijar_app/widgets/artist_section.dart';
 import 'package:pijar_app/widgets/card_tickets.dart';
+import 'package:pijar_app/widgets/custom_devider.dart';
 import 'package:pijar_app/widgets/pictures.dart';
+import 'package:pijar_app/widgets/seats.dart';
 
 class DetailConcert extends StatefulWidget {
   const DetailConcert({super.key});
@@ -15,10 +17,25 @@ class _DetailConcertState extends State<DetailConcert> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          // icon back
-          // text "Detail concert"
-          // icon love outline
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        title: Text("Detail Concert"),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 16),
+            child: IconButton(
+              icon: Icon(Icons.favorite_border), // love outline
+              onPressed: () {
+                // Add your onPressed code here!
+              },
+            ),
           ),
+        ],
+      ),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(24.0),
@@ -71,13 +88,7 @@ class _DetailConcertState extends State<DetailConcert> {
               ),
 
               // Divider
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Divider(
-                  height: 8,
-                  color: Color.fromARGB(255, 249, 249, 249),
-                ),
-              ),
+              CustomDevider(),
               // Choose Your Ticket
               Row(
                 children: [
@@ -180,13 +191,7 @@ class _DetailConcertState extends State<DetailConcert> {
               ),
 
               // Divider
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Divider(
-                  height: 8,
-                  color: Color.fromARGB(255, 249, 249, 249),
-                ),
-              ),
+              CustomDevider(),
               // terget chairity
               Text(
                 "For tornado disaster relief in Texas",
@@ -233,13 +238,7 @@ class _DetailConcertState extends State<DetailConcert> {
               ),
 
               // Divider
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Divider(
-                  height: 8,
-                  color: Color.fromARGB(255, 249, 249, 249),
-                ),
-              ),
+              CustomDevider(),
               // artist
               Text(
                 "Artist",
@@ -270,18 +269,103 @@ class _DetailConcertState extends State<DetailConcert> {
                 songCount: '5 Songs',
               ),
               // Divider
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 8),
-                child: Divider(
-                  height: 8,
-                  color: Color.fromARGB(255, 249, 249, 249),
-                ),
-              ),
+              CustomDevider(),
               // Seatmap
-
-              // divider
-
-              // Button
+              Text(
+                "Seat Map",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+              ),
+              SizedBox(
+                height: 8,
+              ),
+              Container(
+                width: double.infinity,
+                child: Image.asset('lib/assets/stages.png'),
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Column(
+                    children: [
+                      // VVIP
+                      SeatInfo(
+                        seatType: "VVIP",
+                        seatCount: "3,252 seat",
+                        color: Color.fromARGB(255, 177, 225, 164),
+                      ),
+                      // Premium
+                      SeatInfo(
+                        seatType: "Premium",
+                        seatCount: "15,231 seat",
+                        color: Color.fromARGB(255, 185, 205, 241),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        "74,241 Seats /",
+                        style: TextStyle(
+                            fontSize: 24, fontWeight: FontWeight.w600),
+                      ),
+                      Text(
+                        "3,214 available",
+                        style: TextStyle(fontSize: 14),
+                      ),
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      // VVIP
+                      SeatInfo(
+                        seatType: "Reguler",
+                        seatCount: "20,123 seat",
+                        color: Color.fromARGB(255, 244, 244, 244),
+                      ),
+                      // Premium
+                      SeatInfo(
+                        seatType: "Festival",
+                        seatCount: "35.231 seat",
+                        color: Color.fromARGB(255, 215, 215, 215),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              CustomDevider(),
+              Row(
+                children: [
+                  Text(
+                    "\$420",
+                    style: TextStyle(fontSize: 24),
+                  ),
+                  Spacer(),
+                  Text(
+                    '2x Tickets Premium',
+                    style: TextStyle(fontSize: 14),
+                  )
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 16),
+                child: Container(
+                  width: double.infinity,
+                  height: 50,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(32),
+                      color: Color.fromARGB(255, 20, 86, 254)),
+                  child: Center(
+                    child: Text(
+                      'Buy Ticket & Donate',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white),
+                    ),
+                  ),
+                ),
+              )
             ],
           ),
         ),
