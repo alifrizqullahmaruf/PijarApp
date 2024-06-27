@@ -47,7 +47,8 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => DetailConcert()),
+                                  builder: (context) => DetailConcert(),
+                                ),
                               );
                             },
                             imagePath: "lib/assets/coldPlay.png",

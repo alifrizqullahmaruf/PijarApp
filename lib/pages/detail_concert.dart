@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pijar_app/pages/ticket_selection.dart';
 import 'package:pijar_app/widgets/artist_section.dart';
 import 'package:pijar_app/widgets/card_tickets.dart';
 import 'package:pijar_app/widgets/custom_devider.dart';
@@ -109,43 +110,44 @@ class _DetailConcertState extends State<DetailConcert> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  TicketCard(
-                    backgroundColor: Colors.white,
-                    textColor: Colors.black,
-                    text: "VVIP",
-                    borderColor: Colors.grey,
-                    borderWidth: 2.0,
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  TicketCard(
-                    backgroundColor: Colors.blue,
-                    textColor: Color.fromARGB(255, 20, 86, 254),
-                    text: "Premium",
-                    borderColor: Colors.blue,
-                    borderWidth: 2.0,
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  TicketCard(
-                    backgroundColor: Colors.white,
-                    textColor: Colors.black,
-                    text: "Reguler",
-                    borderColor: Colors.grey,
-                    borderWidth: 2.0,
-                  ),
-                  SizedBox(
-                    width: 8,
-                  ),
-                  TicketCard(
-                    backgroundColor: Colors.white,
-                    textColor: Colors.black,
-                    text: "Festival",
-                    borderColor: Colors.grey,
-                    borderWidth: 2.0,
-                  ),
+                  // TicketCard(
+                  //   backgroundColor: Colors.white,
+                  //   textColor: Colors.black,
+                  //   text: "VVIP",
+                  //   borderColor: Colors.grey,
+                  //   borderWidth: 2.0,
+                  // ),
+                  // SizedBox(
+                  //   width: 8,
+                  // ),
+                  // TicketCard(
+                  //   backgroundColor: Colors.blue,
+                  //   textColor: Color.fromARGB(255, 20, 86, 254),
+                  //   text: "Premium",
+                  //   borderColor: Colors.blue,
+                  //   borderWidth: 2.0,
+                  // ),
+                  // SizedBox(
+                  //   width: 8,
+                  // ),
+                  // TicketCard(
+                  //   backgroundColor: Colors.white,
+                  //   textColor: Colors.black,
+                  //   text: "Reguler",
+                  //   borderColor: Colors.grey,
+                  //   borderWidth: 2.0,
+                  // ),
+                  // SizedBox(
+                  //   width: 8,
+                  // ),
+                  // TicketCard(
+                  //   backgroundColor: Colors.white,
+                  //   textColor: Colors.black,
+                  //   text: "Festival",
+                  //   borderColor: Colors.grey,
+                  //   borderWidth: 2.0,
+                  // ),
+                  TicketSelectionWidget(),
                 ],
               ),
               SizedBox(
