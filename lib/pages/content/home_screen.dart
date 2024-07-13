@@ -20,16 +20,16 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SearchBarWidgets(),
-                  SizedBox(height: 16),
+                  const SearchBarWidgets(),
+                  const SizedBox(height: 16),
                   Row(
                     children: [
-                      Text(
+                      const Text(
                         "For you",
                         style: TextStyle(
                             fontSize: 24, fontWeight: FontWeight.w700),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         "See all",
                         style: TextStyle(
@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
@@ -47,7 +47,7 @@ class HomeScreen extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => DetailConcert(),
+                                  builder: (context) => const DetailConcert(),
                                 ),
                               );
                             },
@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
                             title: "Coldplay for Charity Concert",
                             location: "Yogyakarta",
                             date: "Aug 10"),
-                        SizedBox(
+                        const SizedBox(
                           width: 16,
                         ),
                         BigCard(
@@ -67,14 +67,14 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  Text(
+                  const Text(
                     "Find a Concert",
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
                   GridView.count(
@@ -82,34 +82,34 @@ class HomeScreen extends StatelessWidget {
                     crossAxisSpacing: 16,
                     crossAxisCount: 2,
                     shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     children: List.generate(
                       4,
                       (index) {
                         switch (index) {
                           case 0:
-                            return SmallCard(
+                            return const SmallCard(
                               imagePath: "lib/assets/image1.png",
                               title: "Don’t Drunk Henry",
                               location: "Pekanbaru",
                               date: "Aug 30",
                             );
                           case 1:
-                            return SmallCard(
+                            return const SmallCard(
                               imagePath: "lib/assets/image2.png",
                               title: "Sepatu",
                               location: "Surabaya",
                               date: "March 30",
                             );
                           case 2:
-                            return SmallCard(
+                            return const SmallCard(
                               imagePath: "lib/assets/image3.png",
                               title: "Among us",
                               location: "Yogyakarta",
                               date: "Sep 30",
                             );
                           case 3:
-                            return SmallCard(
+                            return const SmallCard(
                               imagePath: "lib/assets/image4.png",
                               title: "Forgive What I’ve Done",
                               location: "Padang",

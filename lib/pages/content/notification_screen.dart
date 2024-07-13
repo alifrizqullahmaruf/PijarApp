@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:pijar_app/widgets/search_bar.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -13,7 +12,7 @@ class NotificationScreen extends StatelessWidget {
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            SearchBarWidgets(),
+            const SearchBarWidgets(),
             Expanded(
               child: Center(
                 child: Column(
@@ -26,9 +25,9 @@ class NotificationScreen extends StatelessWidget {
                       "lib/assets/notification.png",
                       height: 150,
                     ),
-                    SizedBox(
+                    const SizedBox(
                         height: 16), // Menambahkan jarak antara gambar dan teks
-                    Text(
+                    const Text(
                       "Nothing Here!!!",
                       style:
                           TextStyle(fontWeight: FontWeight.w600, fontSize: 24),

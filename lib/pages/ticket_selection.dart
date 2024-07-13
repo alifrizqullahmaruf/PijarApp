@@ -2,6 +2,8 @@ import 'package:chips_choice_null_safety/chips_choice_null_safety.dart';
 import 'package:flutter/material.dart';
 
 class TicketSelectionWidget extends StatefulWidget {
+  const TicketSelectionWidget({super.key});
+
   @override
   _TicketSelectionWidgetState createState() => _TicketSelectionWidgetState();
 }
@@ -26,7 +28,7 @@ class _TicketSelectionWidgetState extends State<TicketSelectionWidget> {
             choiceStyle: C2ChoiceStyle(
               brightness: Brightness.light,
               showCheckmark: false,
-              padding: EdgeInsets.all(8),
+              padding: const EdgeInsets.all(8),
               borderRadius: BorderRadius.circular(8),
               color: Colors.white,
               borderColor: Colors.blue,

@@ -10,7 +10,7 @@ class TicketCard extends StatelessWidget {
   final double borderWidth;
 
   const TicketCard({
-    Key? key,
+    super.key,
     required this.backgroundColor,
     required this.textColor,
     required this.text,
@@ -18,7 +18,7 @@ class TicketCard extends StatelessWidget {
     this.borderRadius = const BorderRadius.all(Radius.circular(8)),
     this.borderColor = Colors.transparent,
     this.borderWidth = 1.0,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

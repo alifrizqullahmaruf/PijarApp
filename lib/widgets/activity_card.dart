@@ -10,7 +10,7 @@ class ActivityCard extends StatelessWidget {
   final String description;
 
   const ActivityCard({
-    Key? key,
+    super.key,
     required this.logoImagePath,
     required this.activityImagePath,
     required this.timeAgo,
@@ -18,25 +18,25 @@ class ActivityCard extends StatelessWidget {
     required this.location,
     required this.moneySpent,
     required this.description,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 24),
+        const SizedBox(height: 24),
         Row(
           children: [
             Image.asset(
               logoImagePath,
               width: 60,
             ),
-            SizedBox(width: 16),
+            const SizedBox(width: 16),
             Text(timeAgo),
           ],
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         ClipRRect(
           borderRadius: BorderRadius.circular(16),
           child: Image.asset(
@@ -45,7 +45,7 @@ class ActivityCard extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -55,24 +55,24 @@ class ActivityCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Row(
                     children: [
-                      Icon(Icons.map),
-                      SizedBox(width: 4),
+                      const Icon(Icons.map),
+                      const SizedBox(width: 4),
                       Text(location),
                     ],
                   ),
                 ],
               ),
             ),
-            SizedBox(width: 48),
+            const SizedBox(width: 48),
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text(
+                const Text(
                   "Money Spent",
                   style: TextStyle(
                     fontSize: 10,
@@ -82,13 +82,13 @@ class ActivityCard extends StatelessWidget {
                 ),
                 Text(
                   moneySpent,
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                  style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                 ),
               ],
             ),
           ],
         ),
-        SizedBox(height: 12),
+        const SizedBox(height: 12),
         Text(description),
       ],
     );

@@ -7,12 +7,12 @@ class SmallCard extends StatelessWidget {
   final String date;
 
   const SmallCard({
-    Key? key,
+    super.key,
     required this.imagePath,
     required this.title,
     required this.location,
     required this.date,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class SmallCard extends StatelessWidget {
             color: Colors.grey.withOpacity(0.3), // Warna bayangan
             spreadRadius: 2, // Menyebar radius
             blurRadius: 4, // Blur radius
-            offset: Offset(0, 2), // Offset dari bayangan (x, y)
+            offset: const Offset(0, 2), // Offset dari bayangan (x, y)
           ),
         ],
       ),
@@ -39,39 +39,39 @@ class SmallCard extends StatelessWidget {
               height: 150,
               fit: BoxFit.cover,
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8), // Mengurangi padding vertikal
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8), // Mengurangi padding vertikal
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SizedBox(height: 4),
+                  const SizedBox(height: 4),
                   Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.map,
                         color: Colors.grey,
                         size: 16,
                       ),
-                      SizedBox(width: 4),
+                      const SizedBox(width: 4),
                       Expanded( // Menambahkan Expanded untuk teks lokasi
                         child: Text(
                           location,
-                          style: TextStyle(color: Colors.grey),
+                          style: const TextStyle(color: Colors.grey),
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Text(
                         date,
-                        style: TextStyle(color: Colors.grey),
+                        style: const TextStyle(color: Colors.grey),
                       ),
                     ],
                   ),

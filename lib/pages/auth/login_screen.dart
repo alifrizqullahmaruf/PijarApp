@@ -13,7 +13,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 249, 249, 249),
+      backgroundColor: const Color.fromARGB(255, 249, 249, 249),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -28,17 +28,17 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 100, // Anda bisa menyesuaikan ukuran gambar
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
 
               // Text label
-              Text(
+              const Text(
                 "Login to your Account",
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Email text field
               TextField(
@@ -48,10 +48,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Password text field
               TextField(
@@ -62,10 +62,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
 
               // Sign in button
               Center(
@@ -74,17 +74,17 @@ class _LoginScreenState extends State<LoginScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => BottomNavbar()));
+                            builder: (context) => const BottomNavbar()));
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF1455FE), // Warna tombol
-                    fixedSize: Size(375, 54), // Ukuran tetap tombol
+                    backgroundColor: const Color(0xFF1455FE), // Warna tombol
+                    fixedSize: const Size(375, 54), // Ukuran tetap tombol
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32), // Radius tombol
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Sign in",
                     style: TextStyle(
                         color: Colors.white,
@@ -93,12 +93,12 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Don't have an account? ",
                     style: TextStyle(fontWeight: FontWeight.w400),
                   ),
@@ -107,9 +107,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => RegisterScreen()));
+                                builder: (context) => const RegisterScreen()));
                       },
-                      child: Text(
+                      child: const Text(
                         "Register",
                         style: TextStyle(
                             color: Color(0xFF1455FE),

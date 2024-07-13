@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SearchBarWidgets extends StatelessWidget {
-  const SearchBarWidgets({Key? key}) : super(key: key);
+  const SearchBarWidgets({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +15,12 @@ class SearchBarWidgets extends StatelessWidget {
         child: Row(
           children: [
             IconButton(
-              icon: Icon(Icons.search),
+              icon: const Icon(Icons.search),
               onPressed: () {
                 // Implement the functionality for the left icon
               },
             ),
-            Expanded(
+            const Expanded(
               child: TextField(
                 decoration: InputDecoration(
                   hintText: "Search by artist, place, or genre...",
@@ -30,7 +30,7 @@ class SearchBarWidgets extends StatelessWidget {
               ),
             ),
             IconButton(
-              icon: Icon(Icons.menu),
+              icon: const Icon(Icons.menu),
               onPressed: () {
                 // Implement the functionality for the right icon
               },

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pijar_app/widgets/custom_devider.dart';
 
 class SeatInfo extends StatelessWidget {
   final String seatType;
@@ -22,7 +21,7 @@ class SeatInfo extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 4),
-            child: Container(
+            child: SizedBox(
               height: 20,
               child: CircleAvatar(
                 backgroundColor: color,
@@ -35,9 +34,9 @@ class SeatInfo extends StatelessWidget {
             children: [
               Text(
                 seatType,
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
+                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w400),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Text(seatCount)

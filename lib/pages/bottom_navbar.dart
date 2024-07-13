@@ -6,7 +6,7 @@ import 'package:pijar_app/pages/content/notification_screen.dart';
 import 'package:pijar_app/pages/content/profile_screen.dart';
 
 class BottomNavbar extends StatefulWidget {
-  const BottomNavbar({Key? key}) : super(key: key);
+  const BottomNavbar({super.key});
 
   @override
   State<BottomNavbar> createState() => _BottomNavbarState();
@@ -23,35 +23,35 @@ class _BottomNavbarState extends State<BottomNavbar> {
 
   List<Widget> _buildScreens() {
     return [
-      HomeScreen(),
-      ActivityScreen(),
-      NotificationScreen(),
-      ProfileScreen(),
+      const HomeScreen(),
+      const ActivityScreen(),
+      const NotificationScreen(),
+      const ProfileScreen(),
     ];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.home),
+        icon: const Icon(Icons.home),
         title: ("Home"),
         activeColorPrimary: Colors.black,
         inactiveColorPrimary: Colors.grey.shade500,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.event),
+        icon: const Icon(Icons.event),
         title: ("Activity"),
         activeColorPrimary: Colors.black,
         inactiveColorPrimary: Colors.grey.shade500,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.notifications),
+        icon: const Icon(Icons.notifications),
         title: ("Notifications"),
         activeColorPrimary: Colors.black,
         inactiveColorPrimary: Colors.grey.shade500,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.person),
+        icon: const Icon(Icons.person),
         title: ("Profile"),
         activeColorPrimary: Colors.black,
         inactiveColorPrimary: Colors.grey.shade500,
@@ -81,11 +81,11 @@ class _BottomNavbarState extends State<BottomNavbar> {
         ),
         popAllScreensOnTapOfSelectedTab: true,
         popActionScreens: PopActionScreensType.all,
-        itemAnimationProperties: ItemAnimationProperties(
+        itemAnimationProperties: const ItemAnimationProperties(
           duration: Duration(milliseconds: 200),
           curve: Curves.ease,
         ),
-        screenTransitionAnimation: ScreenTransitionAnimation(
+        screenTransitionAnimation: const ScreenTransitionAnimation(
           animateTabTransition: true,
           curve: Curves.ease,
           duration: Duration(milliseconds: 200),

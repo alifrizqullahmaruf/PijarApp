@@ -12,7 +12,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 249, 249, 249),
+      backgroundColor: const Color.fromARGB(255, 249, 249, 249),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 24),
@@ -27,17 +27,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   height: 100, // Anda bisa menyesuaikan ukuran gambar
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
 
               // Text label
-              Text(
+              const Text(
                 "Create your account",
                 style: TextStyle(
                   fontSize: 24,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Email text field
               TextField(
@@ -47,10 +47,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 ),
               ),
-              SizedBox(height: 16),
+              const SizedBox(height: 16),
 
               // Password text field
               TextField(
@@ -61,10 +61,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               // Confirm Password text field
               TextField(
                 obscureText: true,
@@ -74,10 +74,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.circular(32),
                   ),
                   contentPadding:
-                      EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                      const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
 
               // Sign in button
               Center(
@@ -85,29 +85,29 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
                     );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xFF1455FE), // Warna tombol
-                    fixedSize: Size(375, 54), // Ukuran tetap tombol
+                    backgroundColor: const Color(0xFF1455FE), // Warna tombol
+                    fixedSize: const Size(375, 54), // Ukuran tetap tombol
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(32), // Radius tombol
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                    padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
                   ),
-                  child: Text(
+                  child: const Text(
                     "Sign up",
                     style: TextStyle(color: Colors.white,fontSize: 16, fontWeight: FontWeight.w400),
                   ),
                 ),
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "Already have an account? ",
                     style: TextStyle(fontWeight: FontWeight.w400),
                   ),
@@ -116,9 +116,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => RegisterScreen()));
+                                builder: (context) => const RegisterScreen()));
                       },
-                      child: Text(
+                      child: const Text(
                         "Login",
                         style: TextStyle(
                             color: Color(0xFF1455FE),

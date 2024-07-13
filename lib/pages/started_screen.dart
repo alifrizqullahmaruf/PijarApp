@@ -12,7 +12,7 @@ class _StartedScreenState extends State<StartedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF9F9F9), // Perbaikan format warna
+      backgroundColor: const Color(0xFFF9F9F9), // Perbaikan format warna
       body: SafeArea(
         child: Center(
           child: Stack(
@@ -22,7 +22,7 @@ class _StartedScreenState extends State<StartedScreen> {
                 bottom: 200,
                 child: Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 550,
                       child: Image.asset("lib/assets/logo.png"),
                     ),
@@ -39,14 +39,14 @@ class _StartedScreenState extends State<StartedScreen> {
                     width: MediaQuery.of(context).size.width *
                         1, // Sesuaikan lebar container
                     color: Colors.white,
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                         horizontal: 24.0,
                         vertical: 16.0), // Padding di dalam container
                     child: SingleChildScrollView(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Harmonize for Humanity, Be a Part of It!",
                             textAlign: TextAlign.center, // Center align text
                             style: TextStyle(
@@ -54,35 +54,35 @@ class _StartedScreenState extends State<StartedScreen> {
                                 fontWeight:
                                     FontWeight.w500), // Ukuran teks disesuaikan
                           ),
-                          SizedBox(height: 24),
+                          const SizedBox(height: 24),
                           ElevatedButton(
                             onPressed: () {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => LoginScreen()));
+                                      builder: (context) => const LoginScreen()));
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
-                                  Color(0xFF1455FE), // Warna tombol
-                              fixedSize: Size(312, 47), // Ukuran tetap tombol
+                                  const Color(0xFF1455FE), // Warna tombol
+                              fixedSize: const Size(312, 47), // Ukuran tetap tombol
                               shape: RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.circular(32), // Radius tombol
                               ),
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 24,
                                   vertical: 16), // Padding dalam tombol
                             ),
-                            child: Text(
+                            child: const Text(
                               "Get started",
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w400),
                             ),
                           ),
-                          SizedBox(height: 24),
-                          Row(
+                          const SizedBox(height: 24),
+                          const Row(
                             mainAxisAlignment:
                                 MainAxisAlignment.center, // Center align row
                             children: [

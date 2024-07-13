@@ -9,50 +9,50 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Center(child: Text("Profile")),
+        title: const Center(child: Text("Profile")),
       ),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Column(
           children: [
-            Container(
-                height: 150, child: Image.asset("lib/assets/profile.png")),
             SizedBox(
+                height: 150, child: Image.asset("lib/assets/profile.png")),
+            const SizedBox(
               height: 16,
             ),
-            Text(
+            const Text(
               "Alif Rizqullah Maruf",
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.w700),
             ),
-            Text(
+            const Text(
               "082111492113",
               style: TextStyle(fontSize: 16),
             ),
-            Text(
+            const Text(
               "alifrizz@mail.ugm.ac.id",
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(
+            const SizedBox(
               height: 56,
             ),
-            EditProfileItem(
+            const EditProfileItem(
               leadingIcon: Icons.lock,
               text: "Privacy Policy",
               trailingIcon: Icons.arrow_right,
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            EditProfileItem(
+            const EditProfileItem(
               leadingIcon: Icons.person,
               text: "Account Settings",
               trailingIcon: Icons.arrow_right,
             ),
-            SizedBox(
+            const SizedBox(
               height: 16,
             ),
-            EditProfileItem(
+            const EditProfileItem(
               leadingIcon: Icons.logout,
               text: "Log out",
               trailingIcon: Icons.arrow_right,

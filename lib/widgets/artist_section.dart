@@ -26,7 +26,7 @@ class ArtistSection extends StatelessWidget {
             backgroundImage: AssetImage(imagePath),
             radius: 30,
           ),
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
           Column(
@@ -34,18 +34,18 @@ class ArtistSection extends StatelessWidget {
             children: [
               Text(
                 artistName,
-                style: TextStyle(fontSize: 18),
+                style: const TextStyle(fontSize: 18),
               ),
               Text(
                 subtitle,
-                style: TextStyle(color: Colors.grey),
+                style: const TextStyle(color: Colors.grey),
               ),
             ],
           ),
-          Spacer(),
+          const Spacer(),
           Text(
             songCount,
-            style: TextStyle(color: Color.fromARGB(255, 20, 86, 254)),
+            style: const TextStyle(color: Color.fromARGB(255, 20, 86, 254)),
           )
         ],
       ),

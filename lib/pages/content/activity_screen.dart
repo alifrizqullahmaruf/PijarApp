@@ -7,14 +7,14 @@ class ActivityScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: EdgeInsets.all(24.0),
         child: SafeArea(
             child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
-            padding: const EdgeInsets.only(bottom: 100),
+            padding: EdgeInsets.only(bottom: 100),
             child: Column(
               children: [
                 SearchBarWidgets(),
