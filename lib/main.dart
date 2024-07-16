@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pijar_app/pages/detail_concert.dart';
 import 'package:pijar_app/pages/splash_screen.dart';
 
 void main() {
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: const SplashScreen(),
+      home: const DetailConcert(),
     );
   }
 }
