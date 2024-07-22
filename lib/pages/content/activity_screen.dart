@@ -3,6 +3,8 @@ import 'package:pijar_app/widgets/activity_card.dart';
 import 'package:pijar_app/widgets/search_bar.dart';
 
 class ActivityScreen extends StatelessWidget {
+    static const String routeName = '/activity';
+
   const ActivityScreen({super.key});
 
   @override

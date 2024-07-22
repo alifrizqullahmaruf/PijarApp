@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pijar_app/widgets/search_bar.dart';
 
 class NotificationScreen extends StatelessWidget {
+    static const String routeName = '/notification';
+
   const NotificationScreen({super.key});
 
   @override
