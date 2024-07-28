@@ -22,7 +22,7 @@ class SmallCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.3), // Warna bayangan
+              color: const Color.fromARGB(255, 255, 255, 255).withOpacity(0.3), // Warna bayangan
               spreadRadius: 2, // Menyebar radius
               blurRadius: 4, // Blur radius
               offset: const Offset(0, 2), // Offset dari bayangan (x, y)

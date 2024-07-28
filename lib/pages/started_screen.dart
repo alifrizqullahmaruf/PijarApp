@@ -60,12 +60,14 @@ class _StartedScreenState extends State<StartedScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const LoginScreen()));
+                                      builder: (context) =>
+                                          const LoginScreen()));
                             },
                             style: ElevatedButton.styleFrom(
                               backgroundColor:
                                   const Color(0xFF1455FE), // Warna tombol
-                              fixedSize: const Size(312, 47), // Ukuran tetap tombol
+                              fixedSize:
+                                  const Size(312, 47), // Ukuran tetap tombol
                               shape: RoundedRectangleBorder(
                                 borderRadius:
                                     BorderRadius.circular(32), // Radius tombol
@@ -77,8 +79,10 @@ class _StartedScreenState extends State<StartedScreen> {
                             child: const Text(
                               "Get started",
                               style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w400),
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
                             ),
                           ),
                           const SizedBox(height: 24),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pijar_app/pages/bottom_navbar.dart';
 import 'package:pijar_app/pages/content/home_screen.dart';
 import 'package:pijar_app/widgets/artist_section.dart';
 import 'package:pijar_app/widgets/custom_devider.dart';
@@ -410,7 +411,7 @@ class _DetailConcertState extends State<DetailConcert> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const HomeScreen(),
+                    builder: (context) => const BottomNavbar(),
                   ),
                 );
               },
